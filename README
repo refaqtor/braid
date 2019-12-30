@@ -1,3 +1,4 @@
-github repository https://github.com/refaqtor/braid is mirror of the 
-active fossil project at: https://where4.net/index.cgi/braid
+Braid is a multipurpose SQLite application file format written in Nim.
 
+active fossil project at: https://where4.net/index.cgi/braid
+is mirrored at the github repository https://github.com/refaqtor/braid
