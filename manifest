@@ -1,7 +1,11 @@
-C initial\sempty\scheck-in
-D 2019-12-30T04:32:15.824
-R d41d8cd98f00b204e9800998ecf8427e
-T *branch * trunk
-T *sym-trunk *
-U diarb
-Z 680d38a1ce2d1dad816fb8c42c54e7bf
+C primary\sfile
+D 2019-12-30T04:32:17.173
+F braid/braid.nimble 9c4ecfc6319623e5e31a5507dd3975ff6d58a91e0c25d16fe975e17a95208560
+F braid/src/braid.nim 3555d89fd63cf514a3a480311f900b0d05291160855ec0a2eddfc81654422926
+F braid/src/braid/submodule.nim 98ad6d43331d59e0a784614ff5c86f343d3665d5321f8ddeeaaa67472f80abab
+F braid/tests/config.nims ffc6233fd1e1db4a31c941b23360c2b4be295cfe31adaf6a008eafe5977e6e9f
+F braid/tests/test1.nim b7f51fcb5c7299a3e500d706c57f8e7699a2d63596dd5ac6176f4238e292dd41
+P 20b27ce7c141c3304f05bcfa61c973f8c9bf02f6c77f4d8a71c12a674e4c7b2a
+R 812053a8f77484d97dbd5fcbea5026bc
+U braid
+Z 7a19efe0e0bf74aa3b81f812b09bae19
