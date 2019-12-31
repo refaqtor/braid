@@ -85,3 +85,59 @@ proc newVersions*(): Versions =
 
 var exeVersions* = newVersions()
 
+when isMainModule:
+    #mynimall.nim
+    # /****************************************************************************
+    # * This Source Code Form is subject to the terms of the Mozilla Public
+    # * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+    # * You can obtain one at http://mozilla.org/MPL/2.0/.
+    # *
+    # * Copyright (c) 2016, shannon.mackey@refaqtory.com
+    # * ***************************************************************************/
+
+    let doc = """
+    exename.
+
+    exe short desc
+
+    exe long desc
+
+    Usage:
+    exename [optionA | optionB ]  <required arg> [--user=<user>] [--password=<password>] [--server=<url>] [--debug=<display>] 
+    exename (-h | --help)
+    exename --version
+
+    Options:
+    -u --user=<user>            User to setup account when serving, or access server when working.
+    -p --password=<password>    Password to setup account when serving, or access server when working.
+    -s --server=<url>           Server <url>. Only first use requires <user> & <password> also.
+    -d --debug=<display>        Set <display> level [default: 1].   
+    -h --help                   Show this screen.
+    --version                   Show version.
+    
+    """
+
+    #TODO: put the actual version data in the help string during compile
+
+    # import strutils
+    import docopt
+    
+    let args = docopt(doc, version = versionTag)
+    setDisplay(parseInt($args["--debug"]))
+    let proj = $args["<project>"]
+    let url = $args["--server"]
+    let user = $args["--user"]
+    let password = $args["--password"]
+    var processor: Core
+    if args["new"] or args["join"]:
+        5.see ">>>> initialize new project"
+        processor = initCore(if args["serve"]:
+                                    Mode.Serve
+                                else:
+                                    Mode.Work,
+                                proj,
+                                url,
+                                user,
+                                password)
+        # elif args["next"]:
+
