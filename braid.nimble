@@ -4,7 +4,7 @@ version       = "0.1.0"
 author        = "refaQtor"
 description   = "Common SQLite datastore"
 license       = "MPL2"
-srcDir        = "src"
+srcDir        = "src/braid"
 
 
 

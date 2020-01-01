@@ -74,7 +74,7 @@ type
 const VcsInfo = staticExec("fossil info").split("checkout:")[1].strip()
 const thisVersion* = newConstVersion(
     name=getAppFilename(),
-    tag=versionTag,
+    tag="0.0.0",
     date=CompileDate,
     time=CompileTime,
     vcs=VcsInfo[0..7],
